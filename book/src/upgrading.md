@@ -15,6 +15,9 @@ list of all changes and improvements that might be useful to you.
 
 * [`FastWritable`](./doc/askama/trait.FastWritable.html) implementations have access to runtime values.
 
+* The template syntax for [macro](./template_syntax.md#Child+template) and [call](./template_syntax.md#Call) have been updated to align with call for jinja2. 
+  For exsiting templates `{% call super() %}` has been replaced with `{{ super() }}` and all calls have to have an associated `{% endcall %}`.
+
 * Custom filters have access to runtime values, and must add a second `&dyn askama::Values` argument as in [the example](./filters.html#examples).
 
 * `|unique` is a built-in filter; `|titlecase` is an alias for `|title`.
